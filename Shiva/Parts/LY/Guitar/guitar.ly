@@ -117,19 +117,47 @@ gtrHarmony = \chordmode {
 	s8 fis s s4 s8 s s |
 	a4 s8 s s b4 fis8 |
 	s1 |
+	d4 s b8 s4 fis8:min |
+	s8 fis s s4 s8 s s |
 	a4 s8 s s b4 fis8 |
 	s1 |
 	a4 s8 s s b4 fis8 |
 	s1 |
 	a4 s8 s s b4 fis8 |
-	s1 |
+	s1 | \pageBreak
 	
-	s1*16 |
+	s1*16 | \pageBreak
 	
 	d4 s b8 s4 fis8:min |
 	s8 fis s s4 s8 s s |
 	a4 s8 s s b4 fis8 |
 	s1 |
+	d4 s b8 s4 fis8:min |
+	s8 fis s s4 s8 s s |
+	a4 s8 s s b4 fis8 |
+	s1 |
+	a4 s8 s s b4 fis8 |
+	s1 |
+	a4 s8 s s b4 fis8 |
+	s1 |
+	
+	s1*8
+	fis4 s e8 s f fis |
+	s8 s s e4 s8 s f |
+	fis4 s e8 s f fis |
+	s8 s s fis:6 s s s fis'' |
+	fis4 s e8 s f fis |
+	s8 s s e4 s8 s f |
+	fis4 s e8 s f fis |
+	s1 |
+	
+
+	d4 s b8 s4 fis8:min |
+	s8 fis s s4 s8 s s |
+	a4 s8 s s b4 fis8 |
+	s1 |
+	d4 s b8 s4 fis8:min |
+	s8 fis s s4 s8 s s |
 	a4 s8 s s b4 fis8 |
 	s1 |
 	a4 s8 s s b4 fis8 |
@@ -179,6 +207,8 @@ gtrChorus = \relative c' {
 	fis8 fis8 fis8 fis8 fis8 eis8 e8 eis8 | \break
 	d'4 d4 b8 b4 fis8 ~ |
 	fis8 fis8 fis8 fis4 e8 fis8 e8 |
+	a4 a8 a8 a8 b4 fis8 ~ |
+	fis8 fis8 fis8 fis8 fis8 eis8 e8 eis8 |
 	a4 a8 a8 a8 b4 fis8 ~ |
 	fis8 fis8 fis8 fis8 fis8 eis8 e8 eis8 |
 	a4 a8 a8 a8 b4 fis8 ~ | fis4 r4 r2 | \break
@@ -243,16 +273,16 @@ gtr = \relative c {
 	\gtrIntro
 	\break
 	R1*8 % \gtrVerse
-	R1*10 % \gtrChorus
+	R1*12 % \gtrChorus
 	\break
 	\gtrSolo
 	\break
-	R1*10 % \gtrChorus
+	R1*12 % \gtrChorus
 	\break
 	\gtrBridge
 	\break
 	R1*8 % \gtrVerse
-	R1*10 % \gtrChorus
+	R1*12 % \gtrChorus
 %	\break
 %	\gtrEnding
 %	\break

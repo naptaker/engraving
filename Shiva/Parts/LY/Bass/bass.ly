@@ -35,6 +35,8 @@ bassChorus = \relative c {
 	a4 a8 a8 a8 b4 fis8 ~ |
 	fis8 fis8 fis8 fis4 fis8 fis4 |
 	a4 a8 a8 a8 b4 fis8 ~ |
+	fis8 fis8 fis8 fis4 fis8 fis4 |
+	a4 a8 a8 a8 b4 fis8 ~ |
 	fis8 fis8 fis8 fis'4 fis8 fis4 |
 }
 
