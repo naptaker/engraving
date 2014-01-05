@@ -7,7 +7,7 @@ else
 	if [[ "$#" -gt 1 && "$2" == "--clean" ]]; then
 		echo "Deleting PDFs..."
 		find "$1" -name "*.pdf" -exec rm '{}' \;
-	elif [[ "$#" -gt 3 && "$#" -lt 5 && "$2" == "--part" ]]; then
+	elif [[ "$#" -ge 3 && "$#" -lt 5 && "$2" == "--part" ]]; then
 		if [[ "$4" == "--clean" ]]; then
 			echo "Deleting PDF..."
 			find "$1/Parts" -name "part_$3.pdf" -exec rm '{}' \;
