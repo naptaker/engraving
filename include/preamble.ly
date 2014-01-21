@@ -94,6 +94,33 @@ scoreMagic = {
 	\set Score.markFormatter = #format-mark-box-letters
 }
 
+startFuture = {
+	\stopStaff
+	\override Staff.StaffSymbol #'line-count = #1
+	\startStaff \hideNotes
+	\override Tie #'transparent = ##t
+	\override Slur #'transparent = ##t
+	\override Staff.Clef #'transparent = ##t
+	\override Staff.KeySignature #'transparent = ##t
+}
+
+endFuture = {
+	\stopStaff
+	\revert Staff.StaffSymbol #'line-count
+	\startStaff \unHideNotes
+	\revert Tie #'transparent
+	\revert Slur #'transparent
+	\revert Staff.Clef #'transparent
+	\revert Staff.KeySignature #'transparent
+}
+
+flam = \drummode { 
+	\override Stem #'length = #4
+	\acciaccatura { sn8 }
+	\revert Stem #'length
+}
+
+
 
 %%%%%%%%%%%%%%%%%% 
 #(define ((my-stencils start) grob) 
