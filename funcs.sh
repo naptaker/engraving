@@ -79,3 +79,23 @@ engrave_score()
 		echo "No score found, skipping..."
 	fi
 }
+
+generate_thumbnails()
+{
+	song="$1"
+	cd "$song/Print/PDF/" &&
+		if [ -d pages ]; then
+			rm -r pages/
+		fi
+		mkdir pages &&
+		pdftk print.pdf burst output pages/page-%02d.pdf &&
+		cd pages &&
+		for file in *.pdf; do
+			filename=${file%.pdf}
+			convert -density 600x600 "$file" -flatten "$filename.png" &&
+				convert -resize 33% "$filename.png" "$filename.png"
+		done &&
+		imageOptim -a -d . &&
+		mv *.png ../PNG/ &&
+		cd .. && rm -r pages/
+}
