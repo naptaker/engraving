@@ -92,8 +92,8 @@ generate_thumbnails()
 		cd pages &&
 		for file in *.pdf; do
 			filename=${file%.pdf}
-			convert -density 600x600 "$file" -flatten "$filename.png" &&
-				convert -resize 33% "$filename.png" "$filename.png"
+			gm convert -density 600x600 "$file" -flatten "$filename.png" &&
+				gm convert -resize 33% "$filename.png" "$filename.png"
 		done &&
 		imageOptim -a -d . &&
 		mv *.png ../PNG/ &&

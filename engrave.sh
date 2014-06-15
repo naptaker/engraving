@@ -6,7 +6,9 @@ if [ "$#" -eq 0 ]; then
 else
 	if [[ "$#" -gt 1 && "$2" == "--clean" ]]; then
 		echo "Deleting PDFs..."
-		find "$1" -name "*.pdf" -exec rm '{}' \; && ./engrave.sh "$1"
+		find "$1" -name "*.pdf" -exec rm '{}' \;
+	elif [[ "$#" -gt 1 && "$2" == "--force" ]]; then
+		./engrave.sh "$1" --clean && ./engrave.sh "$1"
 	elif [[ "$#" -ge 3 && "$#" -lt 5 && "$2" == "--part" ]]; then
 		if [[ "$4" == "--clean" ]]; then
 			echo "Deleting PDF..."
@@ -21,6 +23,6 @@ else
 		engrave_part "$1" "drums"
 		engrave_part "$1" "vocals"
 		engrave_score "$1"
-		generate_thumbnails "$1"
+#		generate_thumbnails "$1"
 	fi
 fi
