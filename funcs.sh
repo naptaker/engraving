@@ -65,15 +65,17 @@ engrave_score()
 				then
 					mv "score.midi" "$song/Score/MIDI/score.mid"
 				fi
-				if [[ -f "$song/Score/PDF/score.pdf" && -f "$song/Print/TEX/print.tex" ]]
-				then
-					echo "Typesetting score for printing..."
-					cd "$song/Print/TEX/" &&
-						pdflatex -interaction=batchmode "print.tex" >/dev/null &&
-						mv "print.pdf" "../PDF/"
-						rm "print.aux" "print.log"
-						cd "../../"
-				fi
+			fi
+			if [[ -f "$song/Score/PDF/score.pdf" && -f "$song/Print/TEX/print.tex" ]]
+			then
+				echo "Typesetting score for printing..."
+				cd "$song/Print/TEX/" &&
+					pdflatex -interaction=batchmode "format.tex" >/dev/null &&
+					rm "format.aux" "format.log" &&
+					pdflatex -interaction=batchmode "print.tex" >/dev/null &&
+					mv "print.pdf" "../PDF/" &&
+					rm -f *.aux *.log *.out format.pdf &&
+					cd ../../../../
 			fi
 	else
 		echo "No score found, skipping..."

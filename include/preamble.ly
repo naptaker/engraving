@@ -119,6 +119,36 @@ flam = \drummode {
 }
 
 
+%% http://lsr.di.unimi.it/LSR/Item?id=198
+%% see also http://lsr.di.unimi.it/LSR/Item?id=190
+theCoda = {
+  \once \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
+  \once \override Score.RehearsalMark.font-size = #6 
+  \mark \markup { \musicglyph #"scripts.coda" }
+}
+
+% http://lsr.dsi.unimi.it/LSR/Snippet?id=664
+toCoda = {
+  % the align part
+  \once \override Score.RehearsalMark #'self-alignment-X = #RIGHT  
+  \once \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
+  \once \override Score.RehearsalMark #'direction = #DOWN
+  %prefered size
+  \once \override Score.RehearsalMark #'font-size = #-2
+  \mark \markup {
+    \center-column {
+      \concat { \lower #1 { "D.S. al  " } { \musicglyph #"scripts.coda" } }
+      \italic { \lower #1 { \small "play both endings" } }
+    }
+  }
+}
+
+breakingCoda = {
+  \break
+  \once \override Score.RehearsalMark.font-size = #6 
+  \mark \markup { \musicglyph #"scripts.coda" }
+}
+
 
 %%%%%%%%%%%%%%%%%% 
 #(define ((my-stencils start) grob) 
