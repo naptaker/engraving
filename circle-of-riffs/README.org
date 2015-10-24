@@ -1,0 +1,4 @@
+* Circle of Riffs
+** [[https://github.com/naptaker/circle-of-riffs-i][I: Fat Cats Go Downtown]]
+** II: A-E-B-F♯/G♭
+** III: C♯/D♭-G♯/A♭-D♯/E♭-A♯/B♭
