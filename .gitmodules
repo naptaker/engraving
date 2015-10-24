@@ -7,3 +7,6 @@
 [submodule "beale-street-sucks-ep"]
 	path = beale-street-sucks-ep
 	url = git@github.com:naptaker/beale-street-sucks-ep.git
+[submodule "merry-fuzzmas"]
+	path = merry-fuzzmas
+	url = git@github.com:naptaker/merry-fuzzmas.git
