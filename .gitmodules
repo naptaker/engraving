@@ -7,3 +7,6 @@
 [submodule "circle-of-riffs/i"]
 	path = circle-of-riffs/i
 	url = git@github.com:naptaker/circle-of-riffs-i
+[submodule "beale-street-sucks-ep"]
+	path = beale-street-sucks-ep
+	url = git@github.com:naptaker/beale-street-sucks-ep.git
