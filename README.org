@@ -1,2 +1,2 @@
-* [[http://naptakerrr.com][Naptaker]] Engraving
+* [[http://naptakerrr.com/about/][Naptaker]] Engraving
 Scores with Lilypond sources, MIDI, PDF, etc.
