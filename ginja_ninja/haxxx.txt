@@ -1,1 +1,0 @@
-fswatch -0 score.ly notes/*.ily | xargs -0 -n 1 -I '{}' lilypond -I notes -I ../lib/lalily -djob-count=8 -dmidi-extension=mid score.ly
