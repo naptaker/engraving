@@ -4,3 +4,6 @@
 [submodule "siestecita-ep"]
 	path = siestecita-ep
 	url = git@github.com:naptaker/siestecita-ep.git
+[submodule "circle-of-riffs/i"]
+	path = circle-of-riffs/i
+	url = git@github.com:naptaker/circle-of-riffs-i
